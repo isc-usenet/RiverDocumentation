@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="River : Introduction" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>River</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/isc-usenet/RiverDocumentation">View on GitHub</a>
+
+          <h1 id="project_title">River</h1>
+          <h2 id="project_tagline">Introduction</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/isc-usenet/RiverDocumentation/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/isc-usenet/RiverDocumentation/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>What is River?</h3>
+
+<p>River is a new file format that allows streamable, seekable media files to be played from Usenet. It is designed to be backwards-compatible with NZB files, automatically error-correcting with parity data, and with little overhead.</p>
+
+<h3>Why should I use River?</h3>
+
+<p>Imagine being able to watch videos the very moment you click "download", instead of waiting to download the entire media file. River is backwards compatible with NZB, but builds on it to allow the ability to correct partial data using PAR2, thus allowing River's capabilities of streaming and seeking to take advantage of the increased data integrity of PAR2. In short, there is no reason to use NZB over River, but using River instead of NZB allows downloaders to stream the content if desired.</p>
+
+<h3>What is a River Link?</h3>
+
+<p>River Links are similar to Torrent magnet links in which a small link can be used to gather the contents of a Torrent file. River Links can be used to grab River files directly off Usenet with a short link, such as <em>river:1340208221.345433@riverup</em> (Big Buck Bunny 480p h264, CC licensed). This makes it very easy to send gigabytes of content to friends with links that are less than 50 characters long.</p>
+
+<h3>How do I download and stream River files? Do they work in SABnzbd+?</h3>
+
+<p>River files will not work directly in SABnzbd+, however by using the River2NZB utility included with Upstream, you can create SABnzbd+ compatible NZB files that can then be fully downloaded and verified. This, however, means you do not have any streaming or seeking capabilities. If you want the full potential of Rivers, download the WebRiver tool. It will allow you to play media in any media player that can stream via HTTP (This includes VLC, mplayer, Media Player Classic, XBMC, MX Video Player) as well as monitor streams and bandwidth.</p>
+
+<h3>What is WebRiver?</h3>
+
+<p>WebRiver is a tool used to stream and play media files from Usenet. It achieves this by allowing media players to stream from it via HTTP. These media players can also seek to any point in the media file and start streaming from that point.</p>
+
+<p><strong><a href="http://isc-usenet.github.com/WebRiver/">Now you know the basics of River files, click here to learn how to use WebRiver</a></strong>
+<br><br><br></p>
+
+<h3>How do I upload River files? Can I use any NZB uploading tool?</h3>
+
+<p>Unfortunately, no. The River format differs too much to be uploadable by any NZB program. While River files may be backward-compatible, they are not forward-compatible, meaning you can convert a River file into an NZB file but not vice versa, and therefore you cannot use an NZB uploader. Currently the only River-compatible uploader is Upstream.</p>
+
+<h3>Why should I upload River files instead of NZB files? What benefit do River files have?</h3>
+
+<p>There is no harm uploading river files, as all files uploaded by River can be converted into NZB files and used with an NZB-compatible downloading tool. SABnzbd+ is the most cited example, however any downloader that can handle split files and par2 files can download the content inside a River file. In addition to this NZB converter, the native River file allows media that can be seeked to any point in the file, streamed, and (if needed) recovered on-the-fly without the media player even knowing anything happened.</p>
+
+<h3>Do I need to use RAR files within River?</h3>
+
+<p>No, and in fact RAR files within Rivers are highly discouraged. RARs are typically uncompressed and serve no purpose other than to split files. Not only does Upstream handle all of the splitting and recovery for you, most media players won't stream RAR files at all. They're simply not needed in River, and create too much of a hassle for both uploaders and downloaders. This is even true in SABnzbd+, where disk IO is through the roof due to unrar. This is not the case for River, as a download does not need to be unpacked in any way - it is unpacked on-the-fly.</p>
+
+<h3>What is Upstream?</h3>
+
+<p>Upstream is a command line River file uploader that can also create River Links (or RLinks). It automatically handles the splitting and par creation, and does so in a way that the data stored in Usenet can be successfully downloaded from an NZB-compatible downloading tool, such as SABnzbd+, after river2nzb conversion. The command line interface is not very intuitive, however it is made more for a graphical tool to configure the settings for upload.</p>
+
+<p><strong><a href="http://isc-usenet.github.com/Upstream/">Now you know the basics of uploading, click here to learn how to use Upstream</a></strong></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">River maintained by <a href="https://github.com/isc-usenet">isc-usenet</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
